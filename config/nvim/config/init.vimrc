@@ -9,7 +9,6 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'tpope/vim-commentary'
 Plug 'ryanoasis/vim-devicons'
 " Plug 'dyng/ctrlsf.vim'
-Plug 'tomasiser/vim-code-dark'
 Plug 'arcticicestudio/nord-vim'
 
 Plug 'nvim-lua/popup.nvim'
@@ -28,7 +27,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 " go
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+" Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 
 " rust

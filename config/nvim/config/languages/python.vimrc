@@ -17,7 +17,18 @@ let g:jedi#completions_command = "<C-Space>"
 let g:jedi#smart_auto_mappings = 0
 let g:jedi#show_call_signatures = "1"
 let g:jedi#force_py_version = 3
+let g:jedi#use_splits_not_buffers = "right"
 
 " Syntax highlight
 let python_highlight_all = 1
 let python_highlight_indent_errors = 1
+
+
+" DEOPLETE-JEDI
+let g:deoplete#enable_at_startup = 1
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+
+" NEOMAKE
+let g:neomake_python_enabled_makers = ['flake8', 'pylint']

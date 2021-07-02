@@ -71,9 +71,9 @@ nmap <leader>y :History:<CR>
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
 
-noremap YY "+y<CR>
-noremap <leader>p "+gP<CR>
-noremap XX "+x<CR>
+" COPY/PASTE
+vnoremap <C-c> "*y :let @+=@*<CR>
+map <C-v> "+P
 
 "" Buffer nav
 noremap <leader>z :bp<CR>
@@ -88,11 +88,14 @@ noremap <leader>c :bd<CR>
 nnoremap <silent> <leader><space> :noh<cr>
 
 "" Switching windows
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
-
+" noremap <C-j> <C-w><C-j>
+" noremap <C-k> <C-w><C-k>
+" noremap <C-l> <C-w><C-l>
+" noremap <C-h> <C-w><C-h>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
 vmap > >gv
@@ -105,6 +108,7 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <Leader>o :.Gbrowse<CR>
 
 " fold
+set foldmethod=syntax
 nnoremap <space> za
 
 " Find files using Telescope command-line sugar.

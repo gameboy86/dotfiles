@@ -18,7 +18,6 @@ set backspace=indent,eol,start
 "" Tabs. May be overridden by autocmd rules
 set tabstop=4
 set softtabstop=0
-" set softtabstop=4
 set shiftwidth=4
 set expandtab
 
@@ -34,10 +33,10 @@ set smartcase
 
 set fileformats=unix,dos,mac
 
-set shell=/bin/sh
-if exists('$SHELL')
-    set shell=$SHELL
-endif
+" set shell=/bin/sh
+" if exists('$SHELL')
+"     set shell=$SHELL
+" endif
 
 let mapleader=','
 
@@ -138,3 +137,7 @@ endif
 
 set statusline+=%#warningmsg#
 set statusline+=%*
+
+" Save position when change split
+au BufLeave * let b:winview = winsaveview()
+au BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif

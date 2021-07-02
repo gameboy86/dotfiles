@@ -7,6 +7,8 @@ let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
 let g:airline_exclude_preview = 1
 let g:airline#extensions#virtualenv#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -32,7 +34,6 @@ if !exists('g:airline_powerline_fonts')
 else
   let g:airline#extensions#tabline#left_sep = ''
   let g:airline#extensions#tabline#left_alt_sep = ''
-
   " powerline symbols
   let g:airline_left_sep = ''
   let g:airline_left_alt_sep = ''
@@ -44,7 +45,6 @@ else
 endif
 
 
-
 "" NERDTree
 let g:NERDTreeChDirMode=2
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
@@ -54,32 +54,15 @@ let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeWinSize = 50
 
 
-" JEDI
-" disable autocompletion, because we use deoplete for completion
-let g:jedi#completions_enabled = 0
-" open the go-to function in split, not another buffer
-let g:jedi#use_splits_not_buffers = "right"
-" <leader>d: go to definition
-" K: check documentation of class or method
-" <leader>n: show the usage of a name in current file
-" <leader>r: rename a name
-
-
-" DEOPLETE-JEDI
+" DEOPLETE
 let g:deoplete#enable_at_startup = 1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 
 " NEOMAKE
-let g:neomake_python_enabled_makers = ['pylint']
+let g:neomake_python_enabled_markers = ['pylint', 'flake8']
 call neomake#configure#automake('nrwi', 500)
-
-
-" CTRLSF
-let g:ctrlsf_position = 'right'
-let g:ctrlsf_search_mode = 'async'
-
 
 " TagBar
 let g:tagbar_autofocus = 1
@@ -91,6 +74,8 @@ let g:tagbar_autofocus = 1
 " zc： Close the fold in current cursor position
 " zC： Close the fold and sub-fold in current cursor position recursively
 
+
+" TELESCOPE
 lua << EOF
 require('telescope').setup{
     defaults = {
