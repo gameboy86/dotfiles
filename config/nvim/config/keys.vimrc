@@ -86,16 +86,11 @@ noremap <leader>c :bd<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
-
-"" Switching windows
-" noremap <C-j> <C-w><C-j>
-" noremap <C-k> <C-w><C-k>
-" noremap <C-l> <C-w><C-l>
-" noremap <C-h> <C-w><C-h>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
 vmap > >gv

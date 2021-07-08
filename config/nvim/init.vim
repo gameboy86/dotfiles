@@ -5,3 +5,4 @@ source $HOME/.config/nvim/config/keys.vimrc
 source $HOME/.config/nvim/config/languages/c.vimrc
 source $HOME/.config/nvim/config/languages/python.vimrc
 source $HOME/.config/nvim/config/languages/go.vimrc
+source $HOME/.config/nvim/config/languages/dart_flutter.vimrc

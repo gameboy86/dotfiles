@@ -23,12 +23,7 @@ let g:jedi#use_splits_not_buffers = "right"
 let python_highlight_all = 1
 let python_highlight_indent_errors = 1
 
-
-" DEOPLETE-JEDI
-let g:deoplete#enable_at_startup = 1
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
-
 " NEOMAKE
-let g:neomake_python_enabled_makers = ['flake8', 'pylint']
+" let g:neomake_python_enabled_makers = ['flake8', 'pylint']
+
+noremap <leader>i :bp<CR>

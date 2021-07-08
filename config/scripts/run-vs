@@ -1,0 +1,17 @@
+#!/usr/bin/zsh
+
+while [ "$#" -gt 0 ]; do
+    curr=$1
+    shift
+    case "$curr" in
+    "-n")
+        prime-run $HOME/GOG\ Games/vintagestory/Vintagestory.exe
+        exit
+        ;;
+    esac
+done
+
+if [ "$#" -eq 0 ]
+then
+    $HOME/GOG\ Games/vintagestory/Vintagestory.exe
+fi

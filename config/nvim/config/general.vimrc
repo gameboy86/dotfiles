@@ -2,6 +2,10 @@ let $LANG = 'en'
 :autocmd BufEnter * silent! normal! g`"
 filetype plugin indent on
 
+set cmdheight=2
+set shortmess+=c
+
+set signcolumn=yes
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
@@ -32,11 +36,6 @@ set smartcase
 
 
 set fileformats=unix,dos,mac
-
-" set shell=/bin/sh
-" if exists('$SHELL')
-"     set shell=$SHELL
-" endif
 
 let mapleader=','
 

@@ -1,0 +1,19 @@
+#!/usr/bin/zsh
+
+while [ "$#" -gt 0 ]; do
+    curr=$1
+    shift
+    case "$curr" in
+    "-n")
+        prime-run $HOME/GOG\ Games/Project\ Zomboid/start.sh
+        ;;
+    *)
+        bash $HOME/GOG\ Games/Project\ Zomboid/start.sh
+        ;;
+    esac
+done
+
+if [ "$#" -eq 0 ]
+then
+    $HOME/GOG\ Games/Project\ Zomboid/start.sh
+fi

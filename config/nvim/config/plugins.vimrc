@@ -1,5 +1,4 @@
 " vim-airline
-" let g:airline_theme = 'powerlineish'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -53,27 +52,8 @@ let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeWinSize = 50
 
-
-" DEOPLETE
-let g:deoplete#enable_at_startup = 1
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
-
-" NEOMAKE
-let g:neomake_python_enabled_markers = ['pylint', 'flake8']
-call neomake#configure#automake('nrwi', 500)
-
 " TagBar
 let g:tagbar_autofocus = 1
-
-
-" SimpylFold
-" zo： Open fold in current cursor position
-" zO： Open fold and sub-fold in current cursor position recursively
-" zc： Close the fold in current cursor position
-" zC： Close the fold and sub-fold in current cursor position recursively
-
 
 " TELESCOPE
 lua << EOF
@@ -83,3 +63,58 @@ require('telescope').setup{
     }
 }
 EOF
+
+" Coc
+
+let g:coc_global_extensions = [
+    \'coc-flutter',
+    \'coc-json',
+    \'coc-pyright'
+]
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <c-space> coc#refresh()
+
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <leader> d <Plug>(coc-definition)
+nmap <leader> g <Plug>(coc-type-definition)
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+nmap <leader>rn <Plug>(coc-rename)
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+noremap <silent><nowait> <leader>ii :<C-u>CocCommand python.sortImports<cr>
+nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+

@@ -1,0 +1,18 @@
+#!/usr/bin/zsh
+
+tmux new -s rna -d 
+
+tmux neww -t rna: -n docker -d 'cd ~/Projects/Rentier/new-app/rentier-free-local-dev && docker-compose up'
+tmux neww -t rna: -n ms-auth -d 'cd ~/Projects/Rentier/new-app/ms-auth && pipenv shell'
+tmux neww -t rna: -n ms-user-valuations -d 'cd ~/Projects/Rentier/new-app/ms-user-valuations && pipenv shell'
+tmux neww -t rna: -n ms-calculations -d 'cd ~/Projects/Rentier/new-app/ms-calculations && pipenv shell'
+tmux neww -t rna: -n libs -d 'cd ~/Projects/Rentier/new-app/lib_re_ms_utils && pipenv shell'
+
+sleep 2
+
+xdg-open 'http://localhost:8000/docs'
+xdg-open 'http://localhost:8001/docs'
+xdg-open 'http://localhost:8002/docs'
+xdg-open 'http://localhost:8003/docs'
+
+tmux a -t rna
