@@ -1,6 +1,5 @@
 PLUG_PATH=~/.local/share/nvim/site/autoload/plug.vim
-NVIM_CONFIG_PATH=$HOME/.config
-I3WM_CONFIG_PATH=$HOME/.config
+CONFIG_PATH=$HOME/.config
 
 SCRIPTS_PATH=$HOME
 ZSH_PATH=$HOME
@@ -13,20 +12,29 @@ echo "Start dotfile installation ..."
 
 ####### I3WM #######
 echo "[*] I3wm cofniguration"
-echo "   -> Check if i3 configuration exist in ${I3WM_CONFIG_PATH} ..."
+echo "   -> Check if i3 configuration exist in ${CONFIG_PATH} ..."
 
-if [ ! -h "${I3WM_CONFIG_PATH}/i3" ]; then
+if [ ! -h "${CONFIG_PATH}/i3" ]; then
     echo "   -> Create symling to i3 confiuguration"
-    ln -s  $PWD/config/i3 $I3WM_CONFIG_PATH/i3
+    ln -s  $PWD/config/i3 $CONFIG_PATH/i3
+fi
+
+####### ROFI #######
+echo "[*] Rofi cofniguration"
+echo "   -> Check if rofi configuration exist in ${CONFIG_PATH} ..."
+
+if [ ! -h "${CONFIG_PATH}/rofi" ]; then
+    echo "   -> Create symling to rofi confiuguration"
+    ln -s  $PWD/config/rofi $CONFIG_PATH/rofi
 fi
 
 ####### Nvim #######
 echo "[*] NVim cofniguration"
-echo "   -> Check if nvim configuration exist in ${NVIM_CONFIG_PATH} ..."
+echo "   -> Check if nvim configuration exist in ${CONFIG_PATH} ..."
 
-if [ ! -h "${NVIM_CONFIG_PATH}/nvim" ]; then
+if [ ! -h "${CONFIG_PATH}/nvim" ]; then
     echo "  -> Create symling to nvim confiuguration"
-    ln -s  $PWD/config/nvim $NVIM_CONFIG_PATH/nvim
+    ln -s  $PWD/config/nvim $CONFIG_PATH/nvim
 fi
 
 echo "   -> Check if nvim plug is installed"
