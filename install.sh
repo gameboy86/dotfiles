@@ -1,5 +1,7 @@
 PLUG_PATH=~/.local/share/nvim/site/autoload/plug.vim
 NVIM_CONFIG_PATH=$HOME/.config
+I3WM_CONFIG_PATH=$HOME/.config
+
 SCRIPTS_PATH=$HOME
 ZSH_PATH=$HOME
 
@@ -9,7 +11,16 @@ TMUX_CONFIG_PATH=$HOME
 
 echo "Start dotfile installation ..."
 
+####### I3WM #######
+echo "[*] I3wm cofniguration"
+echo "   -> Check if i3 configuration exist in ${I3WM_CONFIG_PATH} ..."
 
+if [ ! -h "${I3WM_CONFIG_PATH}/i3" ]; then
+    echo "   -> Create symling to i3 confiuguration"
+    ln -s  $PWD/config/i3 $I3WM_CONFIG_PATH/i3
+fi
+
+####### Nvim #######
 echo "[*] NVim cofniguration"
 echo "   -> Check if nvim configuration exist in ${NVIM_CONFIG_PATH} ..."
 
@@ -25,6 +36,7 @@ if [ ! -f "$PLUG_PATH" ]; then
 fi
 
 
+####### Tmux #######
 echo "[*] Tmux configuration"
 echo "   -> Check if tmux configuration exist in ${TMUX_CONFIG_PATH} ..."
 if [ ! -h "${TMUX_CONFIG_PATH}/.tmux.conf" ]; then
@@ -39,6 +51,7 @@ if [ ! -d "$TMUX_PLUG_PATH" ]; then
 fi
 
 
+####### Scripts #######
 echo "[*] Scripts"
 echo "   -> Check if scripts exist in ${SCRIPTS_PATH} ..."
 if [ ! -h "${SCRIPTS_PATH}/scripts" ]; then
@@ -47,6 +60,7 @@ if [ ! -h "${SCRIPTS_PATH}/scripts" ]; then
 fi
 
 
+####### Zsh #######
 echo "[*] zsh config"
 echo "   -> Check if config exist in ${ZSH_PATH} ..."
 if [ ! -d "${HOME}/.oh-my-zsh" ]; then
@@ -66,6 +80,7 @@ if [ ! -h "${ZSH_PATH}/.fzf.zsh" ]; then
 fi
 
 
+####### Git #######
 echo "[*] git config"
 echo "   -> Check if config exist in ${HOME} ..."
 if [ ! -h "${HOME}/.gitconfig" ]; then

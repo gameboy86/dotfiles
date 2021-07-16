@@ -69,8 +69,9 @@ EOF
 let g:coc_global_extensions = [
     \'coc-flutter',
     \'coc-json',
-    \'coc-pyright'
-]
+    \'coc-pyright',
+    \'coc-lua',
+    \]
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
