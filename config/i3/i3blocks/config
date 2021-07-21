@@ -1,0 +1,66 @@
+[openvpn]
+command=~/.config/i3/i3blocks/scripts/./protonvpn
+interval=10
+
+[cpu_usage2]
+command=~/.config/i3/i3blocks/scripts/cpu_usage2/./cpu_usage2
+markup=pango
+interval=persist
+
+[pacman-updates]
+command=~/.config/i3/i3blocks/scripts/arch-update/./arch-update
+markup=pango
+interval= 3600
+QUIET=False
+WATCH=^linux.* ^pacman.*
+BASE_COLOR=#88c0d0
+UPDATE_COLOR=#bf616a
+AUR=true
+LABEL= 
+
+[load]
+command=~/.config/i3/i3blocks/scripts/./load_average
+interval=1
+label= 
+
+[volume]
+command=~/.config/i3/i3blocks/scripts/./volume 2
+label= 
+interval=1
+
+[disk]
+command=~/.config/i3/i3blocks/scripts/./disk
+interval=1
+label= 
+
+[battery]
+command=~/.config/i3/i3blocks/scripts/battery2/./battery2
+interval=30
+markup=pango
+
+[temperature]
+command=~/.config/i3/i3blocks/scripts/temperature/./temperature
+label=temp
+interval=10
+label=🌡️ 
+
+[time]
+command=date '+%H:%M'
+interval=1
+label= 
+
+[rofi-calendar]
+command=~/.config/i3/i3blocks/scripts/rofi-calendar/rofi-calendar
+interval=3600
+BAR_POSITION=top
+DATEFTM=+%d/%m/%Y
+FONT=Hack 9 
+PREV_MONTH_TEXT=«Prev
+NEXT_MONTH_TEXT=Next»
+ROFI_CONFIG_FILE=~/.config/rofi/nord.rasi
+
+[monitors]
+command=~/.config/i3/i3blocks/scripts/monitor_manager/./monitor_manager
+interval=once
+label=💻
+
