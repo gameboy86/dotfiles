@@ -71,6 +71,7 @@ let g:coc_global_extensions = [
     \'coc-json',
     \'coc-pyright',
     \'coc-lua',
+    \'coc-flutter',
     \]
 
 inoremap <silent><expr> <TAB>
@@ -118,4 +119,3 @@ noremap <silent><nowait> <leader>ii :<C-u>CocCommand python.sortImports<cr>
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-

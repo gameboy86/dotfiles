@@ -12,13 +12,14 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'preservim/tagbar'
-" Plug 'dyng/ctrlsf.vim'
+Plug 'jiangmiao/auto-pairs'
+" " Plug 'dyng/ctrlsf.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-" python
+" " python
 Plug 'davidhalter/jedi-vim'
 Plug 'fannheyward/coc-pyright'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
@@ -35,6 +36,6 @@ Plug 'ludwig/split-manpage.vim'
 
 " Dart/Flutter
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
 
 call plug#end()
-
