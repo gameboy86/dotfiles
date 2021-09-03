@@ -1,11 +1,11 @@
 configuration {
-    modi: "ssh,window,drun";
+    modi: "ssh,window,drun,run";
 	font: "Hack Nerd Font 9";
 	window-command: "wmctrl -i -R {window}";
 	show-icons: true;
-	terminal: "xfce4-terminal";
+	terminal: "alacritty";
 	ssh-client: "ssh";
-	ssh-command: "{terminal} -e '{ssh-client} {host} [-p {port}]'";
+	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
 	run-command: "{cmd}";
 	theme: "nord";
 	icon-theme: "Arc";
@@ -21,4 +21,5 @@ configuration {
     kb-remove-to-eol: "Control+Shift+e";
     kb-cancel: "Control+q";
     kb-remove-char-back: "BackSpace,Control+h";
+    kb-mode-complete: "";
 }

@@ -115,7 +115,6 @@ endif
 set gcr=a:blinkon0
 
 set scrolloff=3
-
 "" Status bar
 set laststatus=2
 

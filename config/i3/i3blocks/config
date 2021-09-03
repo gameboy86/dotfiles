@@ -59,6 +59,11 @@ PREV_MONTH_TEXT=«Prev
 NEXT_MONTH_TEXT=Next»
 ROFI_CONFIG_FILE=~/.config/rofi/nord.rasi
 
+[wifi]
+command=~/.config/i3/i3blocks/scripts/wifi/wifi
+label= 
+interval=6k
+
 [monitors]
 command=~/.config/i3/i3blocks/scripts/monitor_manager/./monitor_manager
 interval=once

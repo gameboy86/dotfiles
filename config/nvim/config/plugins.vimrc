@@ -55,14 +55,6 @@ let g:NERDTreeWinSize = 50
 " TagBar
 let g:tagbar_autofocus = 1
 
-" TELESCOPE
-lua << EOF
-require('telescope').setup{
-    defaults = {
-        color_devicons = true,
-    }
-}
-EOF
 
 " Coc
 
