@@ -1,0 +1,18 @@
+nmap <C-j> <backInHistory>
+nmap <C-k> <forwardInHistory>
+
+cmap jk <toNormalMode>
+emap jk <toNormalMode>
+imap jk <toNormalMode>
+pmap jk <toNormalMode>
+smap jk <toNormalMode>
+vmap jk <toNormalMode>
+
+set firefoxmode=google
+
+nmap <C-q> <moveTabForward>
+nmap <C-a> <moveTabBackward>
+
+nmap <C-h> <previousTab>
+nmap <C-l> <nextTab>
+

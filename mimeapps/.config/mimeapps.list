@@ -1,0 +1,21 @@
+[Default Applications]
+x-scheme-handler/gitkraken=GitKraken.desktop
+x-scheme-handler/postman=Postman.desktop
+application/json=nvim.desktop
+text/html=vieb.desktop
+x-scheme-handler/http=vieb.desktop
+x-scheme-handler/https=vieb.desktop
+x-scheme-handler/about=vieb.desktop
+x-scheme-handler/unknown=vieb.desktop
+x-scheme-handler/chrome=vieb.desktop
+application/x-extension-htm=vieb.desktop
+application/x-extension-html=vieb.desktop
+application/x-extension-shtml=vieb.desktop
+application/xhtml+xml=vieb.desktop
+application/x-extension-xhtml=vieb.desktop
+application/x-extension-xht=vieb.desktop
+
+[Added Associations]
+application/x-yaml=nvim.desktop;
+application/json=nvim.desktop;
+text/json=nvim.desktop

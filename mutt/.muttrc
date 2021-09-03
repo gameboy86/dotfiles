@@ -1,0 +1,34 @@
+# set my_pass="`pass gmai.mgebarski@gmail.com.less_secure_app`"
+
+# set imap_user = "mgebarski@gmail.com"
+# set imap_pass = $my_pass
+
+# set folder = imaps://imap.gmail.com/
+# set spoolfile = +INBOX
+
+# set header_cache="~/.mutt/cache/headers"
+# set message_cachedir="~/.mutt/cache/bodies"
+# set certificate_file="~/.mutt/certificates"
+
+# set ssl_starttls = yes
+# set ssl_force_tls = yes
+
+# set sidebar_visible = no
+# set sidebar_format = "%B%* %n"
+# set mail_check_stats
+# set sidebar_new_mail_only = no
+# set sidebar_width = 15
+# set sidebar_short_path = no
+#
+set pgp_replyencrypt       # now crypt_replyencrypt
+set pgp_replysign          # now crypt_replysign
+set pgp_replysignencrypted # now crypt_replysignencrypted
+set pgp_show_unusable=no
+source /usr/share/mutt-wizard/mutt-wizard.muttrc
+# set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
+source /home/gameboy/.config/mutt/accounts/1-mgebarski@gmail.com.muttrc
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/gameboy/.config/mutt/accounts/1-mgebarski@gmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to mgebarski@gmail.com"
+macro index,pager i2 '<sync-mailbox><enter-command>source /home/gameboy/.config/mutt/accounts/2-maciej.gebarski@rentier.io.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to maciej.gebarski@rentier.io"
+macro index,pager i3 '<sync-mailbox><enter-command>source /home/gameboy/.config/mutt/accounts/3-gameboy56H@protonmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to gameboy56H@protonmail.com"
+alternates "(gameboy56H@protonmail\.com)|(mgebarski@gbsoft\.pl)"
+
