@@ -111,3 +111,16 @@ noremap <silent><nowait> <leader>ii :<C-u>CocCommand python.sortImports<cr>
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+
+" vim.api.nvim_set_keymap('n', '<c-l>', ':FocusSplitNicely<CR>', { silent = true })
+lua <<EOF
+local focus = require('focus')
+focus.width = 80
+focus.winhighlight = false
+focus.treewidth = 10
+vim.api.nvim_set_keymap('n', '<c-h>', ':FocusSplitLeft<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<c-j>', ':FocusSplitDown<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<c-k>', ':FocusSplitUp<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<c-l>', ':FocusSplitRight<CR>', { silent = true })
+EOF

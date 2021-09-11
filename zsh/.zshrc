@@ -57,8 +57,6 @@ alias ll="/bin/ls -latr"
 
 export GITHUB_TOKEN=$(pass show rentier_new_app_github_token)
 export GNUPGHOME="${HOME}/.gnupg"
-export VISUAL=vim
-export EDITOR="$VISUAL"
 export PATH=$PATH:/${HOME}/.local/bin
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -87,5 +85,4 @@ compctl -U -K jump_completion j
 
 . "$HOME/.cargo/env"
 
-# neofetch
 [ -f ~/.fzf.sh ] && source ~/.fzf.zsh

@@ -7,3 +7,5 @@ setxkbmap -option ctrl:nocaps -layout pl
 
 PATH=$PATH:$HOME/scripts/
 export TERMINAL=alacritty
+export EDITOR=nvim
+export VISUAL=nvim

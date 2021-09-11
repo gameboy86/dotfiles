@@ -13,9 +13,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'preservim/tagbar'
 Plug 'jiangmiao/auto-pairs'
-" " Plug 'dyng/ctrlsf.vim'
-"
 Plug 'diepm/vim-rest-console'
+Plug 'beauwilliams/focus.nvim'
 
 " Git
 Plug 'tpope/vim-fugitive'

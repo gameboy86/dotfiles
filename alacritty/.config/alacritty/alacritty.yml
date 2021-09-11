@@ -92,3 +92,8 @@ live_config_reload: true
 key_bindings:
   - { key: V, mods: Control|Shift, action: Paste }
   - { key: C, mods: Control|Shift, action: Copy }
+  # - { key: H, mods: Control, action: SearchBackward}
+  # - { key: L, mods: Control, action: SearchForward }
+  - { key: K, mods: Control|Shift, chars: "\x1b[A" }
+  # - { key: K, mods: Control|Shift, chars: "\x1b0A", mode: AppCursor }
+  - { key: J, mods: Control|Shift, chars: "\x1b[B" }

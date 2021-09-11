@@ -27,3 +27,5 @@ let python_highlight_indent_errors = 1
 " let g:neomake_python_enabled_makers = ['flake8', 'pylint']
 
 noremap <leader>i :bp<CR>
+
+let g:vrc_trigger = '<leader><leader>'

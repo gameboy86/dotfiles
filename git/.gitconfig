@@ -1,4 +1,5 @@
 [user]
 	name = Maciej Gębarski
+	email = mgebarski@gmail.com
 [core]
 	editor = nvim
