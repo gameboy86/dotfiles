@@ -103,7 +103,7 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <Leader>o :.Gbrowse<CR>
 
 " fold
-set foldmethod=syntax
+" set foldmethod=syntax
 nnoremap <space> za
 
 " Find files using Telescope command-line sugar.

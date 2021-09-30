@@ -16,8 +16,6 @@ nmap <C-a> <moveTabBackward>
 nmap <C-h> <previousTab>
 nmap <C-l> <nextTab>
 
-/* emap <C-j> <exploreHistoryNext> */
-/* emap <C-k> <exploreHistoryPrevious> */
 
 emap <C-j> <nextSuggestion>
 emap <C-k> <prevSuggestion>
@@ -31,3 +29,5 @@ nmap <,-space> <emptySearch>
 
 emap <C-h> <C-a><Del>
 cmap <C-h> <C-a><Del>
+
+set externalcommand="add_bookmark"

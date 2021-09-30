@@ -59,6 +59,7 @@ set undolevels=1000
 " Fold
 set foldmethod=indent
 set foldlevel=99
+set autoindent
 
 "" Copy/Paste/Cut
 if has('unnamedplus')

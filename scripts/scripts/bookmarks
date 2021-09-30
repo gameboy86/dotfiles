@@ -1,0 +1,7 @@
+url=$(buku -p -f4 --nostdin | fzf -m --reverse --preview "buku --nostdin -p {1}" --preview-window=wrap | cut -f1)
+
+
+echo $url
+if [ -n "$url" ]; then
+    buku -o $url 
+fi
