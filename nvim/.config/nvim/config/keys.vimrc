@@ -87,9 +87,9 @@ noremap <leader>c :bd<CR>
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
 " nnoremap <C-J> <C-W><C-J>
-" nnoremap <C-K> <C-W><C-K>
 " nnoremap <C-L> <C-W><C-L>
-" nnoremap <C-H> <C-W><C-H>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-H> <C-W><C-H>
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv

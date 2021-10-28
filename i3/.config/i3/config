@@ -137,9 +137,10 @@ exec picom -f
 
 bindsym Mod1+Tab workspace prev
 bindsym Mod1+Q workspace next
-bindsym Mod1+Shift+F workspace 10:Firefox; exec /usr/bin/firefox
-bindsym Mod1+Shift+B workspace 9:Brave; exec /usr/bin/brave
-bindsym Mod1+Shift+S exec /usr/bin/slack
+
+bindsym Mod1+Shift+B exec /usr/bin/autorandr -c
+# bindsym Mod1+Shift+B workspace 9:Brave; exec /usr/bin/brave
+# bindsym Mod1+Shift+S exec /usr/bin/slack
 
 new_window pixel
 

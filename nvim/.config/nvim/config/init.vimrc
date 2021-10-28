@@ -14,10 +14,12 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'preservim/tagbar'
 Plug 'jiangmiao/auto-pairs'
 Plug 'diepm/vim-rest-console'
+
 Plug 'beauwilliams/focus.nvim'
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog'
 Plug 'airblade/vim-gitgutter'
 
 " " python

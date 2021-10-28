@@ -11,6 +11,7 @@ plugins=(
     zsh-autosuggestions
     docker
     docker-compose
+    zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -23,6 +24,23 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
 export PATH=$PATH:$ANDROID_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+
+##### VI MODE
+# VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+# VI_MODE_SET_CURSOR=true
+
+# MODE_INDICATOR="<<<<"
+# ZVM_VI_ESCAPE_BINDKEY=jk
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+ZVM_VI_HIGHLIGHT_FOREGROUND=green             # Color name
+ZVM_VI_HIGHLIGHT_FOREGROUND=#008800           # Hex value
+ZVM_VI_HIGHLIGHT_BACKGROUND=red               # Color name
+ZVM_VI_HIGHLIGHT_BACKGROUND=#ff0000           # Hex value
+ZVM_VI_HIGHLIGHT_EXTRASTYLE=bold,underline    # bold and underline
+ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
+ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_UNDERLINE
 ####################
 ### NNN ###########
 BLK="0B" CHR="0B" DIR="04" EXE="06" REG="00" HARDLINK="06" SYMLINK="06" MISSING="00" ORPHAN="09" FIFO="06" SOCK="0B" OTHER="06"
@@ -43,8 +61,9 @@ n ()
             rm -f "$NNN_TMPFILE" > /dev/null
     fi
 }
-
-
+#### ZSH history
+bindkey -M vicmd "j" up-line-or-beginning-search
+bindkey -M vicmd "k" down-line-or-beginning-search
 ##################
 alias viewer="atril"
 alias vim="nvim"
@@ -59,6 +78,8 @@ export GITHUB_TOKEN=$(pass show rentier_new_app_github_token)
 export GNUPGHOME="${HOME}/.gnupg"
 export PATH=$PATH:$HOME/local_scripts
 export PATH=$PATH:/${HOME}/.local/bin
+
+
 GPG_TTY=$(tty)
 export GPG_TTY
 

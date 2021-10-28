@@ -51,7 +51,7 @@ let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeWinSize = 50
-
+let g:NERDTreeMapActivateNode='l'
 " TagBar
 let g:tagbar_autofocus = 1
 
@@ -112,15 +112,14 @@ nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
+lua require("focus").setup({width=80, winhighlight=false, treewidth=10, bufnew=true})
 
-" vim.api.nvim_set_keymap('n', '<c-l>', ':FocusSplitNicely<CR>', { silent = true })
 lua <<EOF
-local focus = require('focus')
-focus.width = 80
-focus.winhighlight = false
-focus.treewidth = 10
-vim.api.nvim_set_keymap('n', '<c-h>', ':FocusSplitLeft<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<c-j>', ':FocusSplitDown<CR>', { silent = true })
-vim.api.nvim_set_keymap('n', '<c-k>', ':FocusSplitUp<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<c-l>', ':FocusSplitRight<CR>', { silent = true })
 EOF
+
+
+" Flog Git
+nmap <leader>gf :Flog<CR>
+" nmap <silent>l  <Plug>(FlogVSplitCommitRight)

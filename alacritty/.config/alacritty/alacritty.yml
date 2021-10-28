@@ -90,10 +90,14 @@ selection:
 live_config_reload: true
 
 key_bindings:
-  - { key: V, mods: Control|Shift, action: Paste }
-  - { key: C, mods: Control|Shift, action: Copy }
-  # - { key: H, mods: Control, action: SearchBackward}
-  # - { key: L, mods: Control, action: SearchForward }
-  - { key: K, mods: Control|Shift, chars: "\x1b[A" }
-  # - { key: K, mods: Control|Shift, chars: "\x1b0A", mode: AppCursor }
-  - { key: J, mods: Control|Shift, chars: "\x1b[B" }
+  - { key: V,        mods: Control|Shift, action: Paste             }
+  - { key: C,        mods: Control|Shift, action: Copy              }
+  - { key: K,        mods: Control|Shift, chars: "\x1b[A"           }
+  - { key: J,        mods: Control|Shift, chars: "\x1b[B"           }
+  - { key: Left,     mods: Shift,         action: ResetFontSize     }
+  - { key: Up,       mods: Shift,         action: IncreaseFontSize  }
+  - { key: Down,     mods: Shift,         action: DecreaseFontSize  }
+  - { key: Down,     action: None  }
+  - { key: Up,       action: None  }
+  - { key: Insert,   action: None  }
+
