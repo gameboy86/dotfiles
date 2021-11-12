@@ -4,7 +4,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'tmhedberg/SimpylFold'
 Plug 'tpope/vim-commentary'
 Plug 'ryanoasis/vim-devicons'
 Plug 'arcticicestudio/nord-vim'
@@ -14,8 +13,10 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'preservim/tagbar'
 Plug 'jiangmiao/auto-pairs'
 Plug 'diepm/vim-rest-console'
-
+Plug 'Yggdroot/indentLine'
 Plug 'beauwilliams/focus.nvim'
+Plug 'neomake/neomake'
+Plug 'farmergreg/vim-lastplace'
 
 " Git
 Plug 'tpope/vim-fugitive'

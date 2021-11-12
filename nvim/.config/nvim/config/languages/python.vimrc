@@ -1,6 +1,6 @@
 augroup vimrc-python
   autocmd!
-  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79 
+  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=79
       \ formatoptions+=croq softtabstop=4
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
@@ -23,9 +23,4 @@ let g:jedi#use_splits_not_buffers = "right"
 let python_highlight_all = 1
 let python_highlight_indent_errors = 1
 
-" NEOMAKE
-" let g:neomake_python_enabled_makers = ['flake8', 'pylint']
-
-noremap <leader>i :bp<CR>
-
-let g:vrc_trigger = '<leader><leader>'
+noremap <silent><nowait> <leader>ii :<C-u>CocCommand python.sortImports<cr>

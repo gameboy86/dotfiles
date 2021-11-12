@@ -1,0 +1,2 @@
+" fold
+nnoremap <space> za

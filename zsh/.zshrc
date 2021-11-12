@@ -74,7 +74,6 @@ alias nnn="n -er"
 alias ls="n -er"
 alias ll="/bin/ls -latr"
 
-export GITHUB_TOKEN=$(pass show rentier_new_app_github_token)
 export GNUPGHOME="${HOME}/.gnupg"
 export PATH=$PATH:$HOME/local_scripts
 export PATH=$PATH:/${HOME}/.local/bin
