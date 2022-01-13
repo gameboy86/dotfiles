@@ -16,7 +16,7 @@ WATCH=^linux.* ^pacman.*
 BASE_COLOR=#88c0d0
 UPDATE_COLOR=#bf616a
 AUR=true
-LABEL= 
+LABEL= 
 
 [load]
 command=~/.config/i3/i3blocks/scripts/./load_average
@@ -42,12 +42,12 @@ markup=pango
 command=~/.config/i3/i3blocks/scripts/temperature/./temperature
 label=temp
 interval=10
-label=🌡️ 
+label= 
 
 [time]
 command=date '+%H:%M'
 interval=1
-label= 
+label= 
 
 [rofi-calendar]
 command=~/.config/i3/i3blocks/scripts/rofi-calendar/rofi-calendar
@@ -61,11 +61,11 @@ ROFI_CONFIG_FILE=~/.config/rofi/nord.rasi
 
 [wifi]
 command=~/.config/i3/i3blocks/scripts/wifi/wifi
-label= 
+label=  
 interval=6k
 
 [monitors]
 command=~/.config/i3/i3blocks/scripts/monitor_manager/./monitor_manager
 interval=once
-label=💻
+label=💻 
 

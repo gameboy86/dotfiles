@@ -1,2 +1,0 @@
-" fold
-nnoremap <space> za

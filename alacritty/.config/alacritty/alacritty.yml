@@ -51,18 +51,17 @@ background_opacity: 1.0
 
 font:
   normal:
-    family: "Hack"
+    family: "Hack Nerd Font"
     style: Regular
   bold:
-    family: "Hack"
+    family: "Hack Nerd Font"
     style: Bold
   italic:
-    family: "Hack"
+    family: "Hack Nerd Font"
     style: Italic
   bold_italic:
-    family: "Hack"
+    family: "Hack Nerd Font"
     style: Bold Italic
-
   size: 6.0
 
   offset:
@@ -91,14 +90,14 @@ selection:
 live_config_reload: true
 
 key_bindings:
-  - { key: V,        mods: Control|Shift, action: Paste             }
-  - { key: C,        mods: Control|Shift, action: Copy              }
-  - { key: K,        mods: Control|Shift, chars: "\x1b[A"           }
-  - { key: J,        mods: Control|Shift, chars: "\x1b[B"           }
-  - { key: Left,     mods: Shift,         action: ResetFontSize     }
+  #  - { key: V,        mods: Control|Shift, action: Paste             }
+  #- { key: C,        mods: Control|Shift, action: Copy              }
+  #- { key: K,        mods: Control|Shift, chars: "\x1b[A"           }
+  #- { key: J,        mods: Control|Shift, chars: "\x1b[B"           }
+  #- { key: Left,     mods: Shift,         action: ResetFontSize     }
   - { key: Up,       mods: Shift,         action: IncreaseFontSize  }
   - { key: Down,     mods: Shift,         action: DecreaseFontSize  }
-  - { key: Down,     action: None  }
-  - { key: Up,       action: None  }
+    #  - { key: Down,     action: None  }
+    #  - { key: Up,       action: None  }
   - { key: Insert,   action: None  }
 

@@ -1,9 +1,0 @@
-{
-    "pyright.organizeimports.provider": "isort",
-    "python.linting.flake8Enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.pytypeEnabled": true,
-    "yaml.schemas": {
-        "kubernetes": "/*.yaml"
-    }
-}

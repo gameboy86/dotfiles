@@ -17,8 +17,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# default_border pixel 5
-# default_floating_border pixel 5
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -38,7 +36,9 @@ bindsym $mod+Ctrl+r exec rofi -show run
 bindsym $mod+Ctrl+s exec rofi -show ssh
 bindsym $mod+Ctrl+w exec rofi -show window
 
-new_window 1pixel
+# new_window 1pixel
+new_window pixel 3
+
 
 for_window [instance="bookmarks"] floating enable, resize set 1400px 300px, move position center
 for_window [title="Android Emulator"] floating enabled, resize set 550px 950px, move position center
@@ -139,23 +139,14 @@ bindsym $mod+r mode "resize"
 bar {
     position top
   	status_command i3blocks -c ~/.config/i3/i3blocks/config
-    font pango:Hack 9 
+    #font pango:Hack 9 
+    font pango:Hack Nerd Font 9 
 }
 
 gaps inner 10
 exec nitrogen --restore
-# exec picom -f
 
 bindsym Mod1+Tab workspace prev
 bindsym Mod1+Q workspace next
 
 bindsym Mod1+Shift+B exec /usr/bin/autorandr -c
-# bindsym Mod1+Shift+B workspace 9:Brave; exec /usr/bin/brave
-# bindsym Mod1+Shift+S exec /usr/bin/slack
-
-# new_window pixel
-# hide_edge_borders both
-# new_window pixel
-# new_float normal 2
-# new_window none
-# new_float normal 2
