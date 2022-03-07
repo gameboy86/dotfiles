@@ -26,6 +26,8 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
+keymap("n", "<leader>cd", ":cd %:p:h<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
@@ -75,6 +77,7 @@ keymap("n", "<leader>ft", "<cmd>Telescope live_grep<cr>", opts)
 -- My
 keymap("n", "<leader><space>", ":noh<cr>", term_opts)
 keymap("n", "oo", "o<Esc>", term_opts)
+keymap("n", "OO", "O<Esc>", term_opts)
 
 keymap("n", "sa", "i<space>", term_opts)
 keymap("n", "ss", "i<space><Esc>", term_opts)
@@ -85,9 +88,17 @@ keymap("n", "<leader>v", ":<C-u>vsplit<cr>", term_opts)
 
 keymap("n", "<space>", "za", term_opts)
 
+keymap("n", "<leader>,", "<Plug>RestNvim", {})
 
 vim.cmd[[
     augroup vimrc-python
     autocmd!
     autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=79 formatoptions+=croq softtabstop=4
+]]
+
+vim.cmd[[
+    augroup vimrc-go
+    autocmd!
+    " autocmd FileType go setlocal expandtab tabstop=4 colorcolumn=79 smartindent shiftwidth=4 shiftround softtabstop=-1
+    autocmd FileType go setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 ]]

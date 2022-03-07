@@ -38,6 +38,11 @@ local options = {
 }
 vim.opt.shortmess:append "c"
 
+vim.opt.foldmethod = 'indent'
+vim.opt.foldlevel = 20
+vim.opt.list = true
+vim.opt.listchars:append("eol:↴")
+
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
