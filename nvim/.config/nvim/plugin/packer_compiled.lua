@@ -194,6 +194,11 @@ _G.packer_plugins = {
     path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["rest.nvim"] = {
+    loaded = true,
+    path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/rest.nvim",
+    url = "https://github.com/NTBBloodbath/rest.nvim"
+  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",

@@ -95,10 +95,10 @@ return packer.startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'
 
   -- rest-vim
-  -- use {
-  --   'NTBBloodbath/rest.nvim',
-  --   requires = { 'nvim-lua/plenary.nvim' }
-  -- }
+  use {
+    'NTBBloodbath/rest.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
 
   use "akinsho/toggleterm.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
