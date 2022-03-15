@@ -89,6 +89,10 @@ keymap("n", "<leader>v", ":<C-u>vsplit<cr>", term_opts)
 keymap("n", "<space>", "za", term_opts)
 
 keymap("n", "<leader>,", "<Plug>RestNvim", {})
+keymap("n", "<leader>f", ":Format<cr>", opts)
+
+-- GIT
+keymap("n", "<leader>bb", ":GitBlameToggle<CR>", opts)
 
 vim.cmd[[
     augroup vimrc-python
