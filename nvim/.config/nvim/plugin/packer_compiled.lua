@@ -154,11 +154,6 @@ _G.packer_plugins = {
     path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
-  ["numb.nvim"] = {
-    loaded = true,
-    path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/numb.nvim",
-    url = "https://github.com/nacro90/numb.nvim"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/nvim-autopairs",

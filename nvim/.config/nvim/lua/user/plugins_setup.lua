@@ -101,7 +101,6 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "rcarriga/nvim-notify"
   use "windwp/nvim-autopairs"
-  use 'nacro90/numb.nvim'
   use "goolord/alpha-nvim"
   use "folke/todo-comments.nvim"
 
