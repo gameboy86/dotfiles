@@ -73,7 +73,11 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
 keymap("n", "<leader>ft", "<cmd>Telescope live_grep<cr>", opts)
 
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
+keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
+keymap("n", "<leader>fl", "<cmd>Telescope git_files<cr>", opts)
 
+keymap("n", "<leader>pp", "<cmd>Telescope pp_vim<cr>", opts)
 -- My
 keymap("n", "<leader><space>", ":noh<cr>", term_opts)
 keymap("n", "oo", "o<Esc>", term_opts)

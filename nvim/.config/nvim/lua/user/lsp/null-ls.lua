@@ -17,6 +17,7 @@ null_ls.setup {
     formatting.black.with { extra_args = { "--fast", "--line-length=79" } },
     formatting.stylua,
     formatting.gofmt,
+    formatting.dart_format,
 
     diagnostics.flake8,
     diagnostics.golangci_lint,

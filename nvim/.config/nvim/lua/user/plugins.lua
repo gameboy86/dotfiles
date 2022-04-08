@@ -97,7 +97,7 @@ return packer.startup(function(use)
     'NTBBloodbath/rest.nvim',
     requires = { 'nvim-lua/plenary.nvim' }
   }
-  
+ 
   use "akinsho/toggleterm.nvim"
   use "rcarriga/nvim-notify"
   use "windwp/nvim-autopairs"
@@ -107,8 +107,10 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
   use "f-person/git-blame.nvim"
+  -- Dart && Fluatter
+  use "akinsho/flutter-tools.nvim"
 
-
+  use "gameboy86/pp-vim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
