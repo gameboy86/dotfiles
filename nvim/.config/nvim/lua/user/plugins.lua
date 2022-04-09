@@ -98,6 +98,12 @@ return packer.startup(function(use)
     requires = { 'nvim-lua/plenary.nvim' }
   }
  
+  -- dap
+  use "mfussenegger/nvim-dap"
+  use {'nvim-telescope/telescope-dap.nvim'}
+  use {'mfussenegger/nvim-dap-python'}
+  use {'rcarriga/nvim-dap-ui'}
+
   use "akinsho/toggleterm.nvim"
   use "rcarriga/nvim-notify"
   use "windwp/nvim-autopairs"

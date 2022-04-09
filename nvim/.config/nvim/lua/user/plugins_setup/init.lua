@@ -15,5 +15,7 @@ require "user.plugins_setup.git-blame"
 require "user.plugins_setup.todo-comments"
 require "user.plugins_setup.flutter_tools"
 require "user.plugins_setup.pp-vim"
+require "user.plugins_setup.dap"
+
 require "user.languages.golang.options"
 require "user.languages.python.options"
