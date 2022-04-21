@@ -9,6 +9,8 @@ plugins=(
     pipenv
     sudo
     zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-history-substring-search
     docker
     docker-compose
     zsh-vi-mode
@@ -16,6 +18,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# bindkey "^[[A" history-substring-search-up
+# bindkey "^[[B" history-substring-search-down
+# bindkey '\e[A' vi-history-search-backward
+# bindkey '\e[B' vi-history-search-forward
 
 ### Dart/Flutter ###
 export JAVA_HOME='/usr/lib/jvm/java-8-openjdk'
@@ -30,6 +36,8 @@ export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
 ##### VI MODE
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+ZVM_VI_VISUAL_ESCAPE_BINDKEY=jk
+ZVM_VI_OPPEND_ESCAPE_BINDKEY=jk
 ZVM_VI_HIGHLIGHT_FOREGROUND=green             # Color name
 ZVM_VI_HIGHLIGHT_FOREGROUND=#008800           # Hex value
 ZVM_VI_HIGHLIGHT_BACKGROUND=red               # Color name
@@ -63,8 +71,8 @@ n ()
 
 #### ZSH history
 #
-bindkey -M vicmd "j" up-line-or-beginning-search
-bindkey -M vicmd "k" down-line-or-beginning-search
+# bindkey -M vicmd "j" up-line-or-beginning-search
+# bindkey -M vicmd "k" down-line-or-beginning-search
 
 ##################
 alias viewer="atril"
@@ -75,11 +83,13 @@ alias ocat="/bin/cat"
 alias nnn="n -er"
 alias ls="n -er"
 alias ll="/bin/ls -latr"
+alias brave="brave --enable-features=VaapiVideoDecoder"
+
 
 export GNUPGHOME="${HOME}/.gnupg"
 export PATH=$PATH:$HOME/local_scripts
 export PATH=$PATH:/${HOME}/.local/bin
-
+export PATH=$PATH:$HOME/scripts/
 
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -110,3 +120,7 @@ compctl -U -K jump_completion j
 . "$HOME/.cargo/env"
 
 [ -f ~/.fzf.sh ] && source ~/.fzf.zsh
+# zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')
+
+bindkey "^P" history-substring-search-up
+bindkey "^N" history-substring-search-down
