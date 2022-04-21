@@ -51,3 +51,15 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd "set termguicolors"
+
+
+vim.cmd "cnoreabbrev W! w!"
+vim.cmd "cnoreabbrev Q! q!"
+vim.cmd "cnoreabbrev Qall! qall!"
+vim.cmd "cnoreabbrev Wq wq"
+vim.cmd "cnoreabbrev Wa wa"
+vim.cmd "cnoreabbrev wQ wq"
+vim.cmd "cnoreabbrev WQ wq"
+vim.cmd "cnoreabbrev W w"
+vim.cmd "cnoreabbrev Q q"
+vim.cmd "cnoreabbrev Qall qall"
