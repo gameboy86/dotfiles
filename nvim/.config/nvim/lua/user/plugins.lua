@@ -47,7 +47,7 @@ return packer.startup(function(use)
 
   -- Colorschemas
   use "arcticicestudio/nord-vim"
-  use "folke/tokyonight.nvim"
+--  use "folke/tokyonight.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -102,7 +102,9 @@ return packer.startup(function(use)
   use "mfussenegger/nvim-dap"
   use {'nvim-telescope/telescope-dap.nvim'}
   use {'mfussenegger/nvim-dap-python'}
+  use {'leoluz/nvim-dap-go'}
   use {'rcarriga/nvim-dap-ui'}
+  use {'simrat39/rust-tools.nvim'}
 
   use "akinsho/toggleterm.nvim"
   use "rcarriga/nvim-notify"
@@ -114,7 +116,7 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
   use "f-person/git-blame.nvim"
   -- Dart && Fluatter
-  use "akinsho/flutter-tools.nvim"
+--  use "akinsho/flutter-tools.nvim"
 
   use "gameboy86/pp-vim"
   -- Automatically set up your configuration after cloning packer.nvim

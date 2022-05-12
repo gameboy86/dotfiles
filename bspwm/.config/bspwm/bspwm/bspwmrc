@@ -27,3 +27,4 @@ bspc rule -a Zathura state=tiled
 
 # Reoader workspaces. This some script is run with posthook autorandr
 /home/gameboy/.config/bspwm/scripts/./bspwm_reorder
+xss-lock -- betterlockscreen -l &

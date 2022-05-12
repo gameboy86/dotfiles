@@ -7,3 +7,4 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 picom -f &
+. "$HOME/.cargo/env"

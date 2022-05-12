@@ -1,5 +1,3 @@
-exec picom -f &
-
 if [ -x /usr/bin/gpg-agent ]; then
  eval "$(/usr/bin/gpg-agent --daemon)"
 fi
@@ -8,4 +6,5 @@ if [ -n "${GPG_AGENT_INFO}" ]; then
   kill $(echo ${GPG_AGENT_INFO} | cut -d':' -f 2) >/dev/null 2>&1
 fi
 
-
+xmodmap ~/.Xmodmap
+picom -f &

@@ -49,6 +49,9 @@ ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_UNDERLINE
 
 export PYTHONPATH=/usr/bin/python3.10
 
+## GO
+export GO111MODULE=on
+
 ### NNN ###########
 BLK="0B" CHR="0B" DIR="04" EXE="06" REG="00" HARDLINK="06" SYMLINK="06" MISSING="00" ORPHAN="09" FIFO="06" SOCK="0B" OTHER="06"
 export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
@@ -116,8 +119,6 @@ chpwd_functions+=__jump_chpwd
 compctl -U -K jump_completion j
 
 #######################
-
-. "$HOME/.cargo/env"
 
 [ -f ~/.fzf.sh ] && source ~/.fzf.zsh
 # zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')

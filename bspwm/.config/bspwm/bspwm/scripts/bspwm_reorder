@@ -13,11 +13,11 @@ if [[ -n $@ ]]; then
   order=( "$@" )
 else
   #mapfile -t order < <(bspc query -M)
-  mapfile -t order < <(xrandr | sed -n "s/^\([^ ]*\) connected.*/\1/p")
+  # mapfile -t order < <(xrandr | sed -n "s/^\([^ ]*\) connected.*/\1/p")
+  mapfile -t order < <(xrandr | grep -E " connected (primary )?[1-9]+" | sed -e "s/\([A-Z0-9]\+\) connected.*/\1/")
 fi
 
 monitors=${#order[@]}
-
 removed=( )
 for monitor in $(bspc query -M); do
   echo "Considering monitor $monitor"

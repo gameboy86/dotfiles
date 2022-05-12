@@ -119,11 +119,6 @@ _G.packer_plugins = {
     path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["flutter-tools.nvim"] = {
-    loaded = true,
-    path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
-    url = "https://github.com/akinsho/flutter-tools.nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -173,6 +168,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-go"] = {
+    loaded = true,
+    path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
+    url = "https://github.com/leoluz/nvim-dap-go"
   },
   ["nvim-dap-python"] = {
     loaded = true,
@@ -249,6 +249,11 @@ _G.packer_plugins = {
     path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/rest.nvim",
     url = "https://github.com/NTBBloodbath/rest.nvim"
   },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
   ["telescope-dap.nvim"] = {
     loaded = true,
     path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
@@ -273,11 +278,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/home/gameboy/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-bbye"] = {
     loaded = true,
