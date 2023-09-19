@@ -132,7 +132,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   ----------------------------------------------------------------------
   -- SUPER + FUNCTION KEYS
 
-  [ ((modMask, xK_e), spawn $ "atom" )
+  [ ((modMask, xK_e), spawn $ "arandr" )
   , ((modMask, xK_c), spawn $ "conky-toggle" )
   , ((modMask, xK_f), sendMessage $ Toggle NBFULL)
   , ((modMask, xK_h), spawn $ "urxvt 'htop task manager' -e htop" )
@@ -190,7 +190,10 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((controlMask .|. mod1Mask , xK_u ), spawn $ "pavucontrol")
   -- , ((controlMask .|. mod1Mask , xK_v ), spawn $ "vivaldi-stable")
   , ((controlMask .|. mod1Mask , xK_w ), spawn $ "arcolinux-welcome-app")
-  , ((controlMask .|. mod1Mask , xK_Return ), spawn $ "alacritty")
+
+  -- DISPLAY CHANGE
+  , ((controlMask .|. mod1Mask , xK_1 ), spawn $ "$HOME/.screenlayout/mobile.sh")
+  , ((controlMask .|. mod1Mask , xK_2 ), spawn $ "$HOME/.screenlayout/dp2.sh")
 
   -- ALT + ... KEYS
 

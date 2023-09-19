@@ -20,18 +20,18 @@ xsetroot -cursor_name left_ptr &
 
 
 #Some ways to set your wallpaper besides variety or nitrogen
-feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
-feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
+# feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
+# feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 
 #starting utility applications at boot time
-run variety &
+# run variety &
 run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &
-run volumeicon &
+# run volumeicon &
 numlockx on &
 blueberry-tray &
-picom --config $HOME/.xmonad/scripts/picom.conf &
+# picom --config $HOME/.xmonad/scripts/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
