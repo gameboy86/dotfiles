@@ -16,8 +16,11 @@ plugins=(
     # zsh-vi-mode
     zsh-fzf-history-search
     zsh-autosuggestions
+    tmux
 )
-
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=false
+ZSH_TMUX_AUTOQUIT=false
 
 if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
