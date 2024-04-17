@@ -20,6 +20,7 @@ plugins=(
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOCONNECT=false
 ZSH_TMUX_AUTOQUIT=false
+ZSH_TMUX_CONFIG=".config/tmux/tmux.conf"
 
 if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
