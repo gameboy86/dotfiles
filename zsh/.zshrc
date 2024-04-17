@@ -13,7 +13,6 @@ plugins=(
     git
     docker
     docker-compose
-    # zsh-vi-mode
     zsh-fzf-history-search
     zsh-autosuggestions
     tmux
@@ -451,9 +450,9 @@ chpwd_functions+=__jump_chpwd
 compctl -U -K jump_completion j
 
 
-if [ -f /usr/share/oh-my-zsh/plugins/zsh-fzf-history-search/zsh-fzf-history-search.zsh ]; then
-  source /usr/share/oh-my-zsh/plugins/zsh-fzf-history-search/zsh-fzf-history-search.zsh
-fi
+# if [ -f /usr/share/oh-my-zsh/plugins/zsh-fzf-history-search/zsh-fzf-history-search.zsh ]; then
+#   source /usr/share/oh-my-zsh/plugins/zsh-fzf-history-search/zsh-fzf-history-search.zsh
+# fi
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
