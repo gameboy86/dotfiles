@@ -1,4 +1,4 @@
 tint2 &
-picom &
+picom --config $HOME/.config/picom/config &
 nitrogen --restore &
 rofi -show run &
