@@ -1,4 +1,4 @@
-export PAGER='nvim -R'
+export PAGER='nvim -R +AnsiEsc'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export ZSH=/usr/share/oh-my-zsh/
