@@ -317,3 +317,5 @@ alias hdmi1='.screenlayout/./hdmi-A-0-1.sh'
 
 alias nvimdiff='nvim -d'
 alias n="nvim"
+alias cat="bat --pager less"
+alias bat="bat --pager less"
