@@ -25,6 +25,7 @@ xsetroot -cursor_name left_ptr &
 
 #starting utility applications at boot time
 # run variety &
+/usr/bin/dropbox &
 run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &

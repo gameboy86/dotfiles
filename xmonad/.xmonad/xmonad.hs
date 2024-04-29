@@ -133,37 +133,37 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- SUPER + FUNCTION KEYS
 
   [ ((modMask, xK_e), spawn $ "arandr" )
-  , ((modMask, xK_c), spawn $ "conky-toggle" )
-  , ((modMask, xK_f), sendMessage $ Toggle NBFULL)
-  , ((modMask, xK_h), spawn $ "urxvt 'htop task manager' -e htop" )
-  , ((modMask, xK_m), spawn $ "pragha" )
   , ((modMask, xK_q), kill )
-  , ((modMask, xK_r), spawn $ "rofi-theme-selector" )
-  , ((modMask, xK_t), spawn $ "urxvt" )
-  , ((modMask, xK_v), spawn $ "pavucontrol" )
   , ((modMask, xK_y), spawn $ "polybar-msg cmd toggle" )
   , ((modMask, xK_x), spawn $ "archlinux-logout" )
+  , ((modMask, xK_v), spawn $ "org.pulseaudio.pavucontrol" )
   , ((modMask, xK_Escape), spawn $ "xkill" )
   , ((modMask, xK_Return), spawn $ "alacritty" )
-  , ((modMask, xK_F1), spawn $ "vivaldi-stable" )
-  , ((modMask, xK_F2), spawn $ "atom" )
-  , ((modMask, xK_F3), spawn $ "inkscape" )
-  , ((modMask, xK_F4), spawn $ "gimp" )
-  , ((modMask, xK_F5), spawn $ "meld" )
-  , ((modMask, xK_F6), spawn $ "vlc --video-on-top" )
-  , ((modMask, xK_F7), spawn $ "virtualbox" )
-  , ((modMask, xK_F8), spawn $ "thunar" )
-  , ((modMask, xK_F9), spawn $ "evolution" )
-  , ((modMask, xK_F10), spawn $ "spotify" )
-  , ((modMask, xK_F11), spawn $ "rofi -theme-str 'window {width: 100%;height: 100%;}' -show drun" )
-  , ((modMask, xK_F12), spawn $ "rofi -show drun" )
+  -- , ((modMask, xK_c), spawn $ "conky-toggle" )
+  , ((modMask, xK_f), sendMessage $ Toggle NBFULL)
+  -- , ((modMask, xK_h), spawn $ "urxvt 'htop task manager' -e htop" )
+  -- , ((modMask, xK_m), spawn $ "pragha" )
+  -- , ((modMask, xK_r), spawn $ "rofi-theme-selector" )
+  -- , ((modMask, xK_t), spawn $ "urxvt" )
+  -- , ((modMask, xK_F1), spawn $ "vivaldi-stable" )
+  -- , ((modMask, xK_F2), spawn $ "atom" )
+  -- , ((modMask, xK_F3), spawn $ "inkscape" )
+  -- , ((modMask, xK_F4), spawn $ "gimp" )
+  -- , ((modMask, xK_F5), spawn $ "meld" )
+  -- , ((modMask, xK_F6), spawn $ "vlc --video-on-top" )
+  -- , ((modMask, xK_F7), spawn $ "virtualbox" )
+  -- , ((modMask, xK_F8), spawn $ "thunar" )
+  -- , ((modMask, xK_F9), spawn $ "evolution" )
+  -- , ((modMask, xK_F10), spawn $ "spotify" )
+  -- , ((modMask, xK_z), spawn $ "rofi -theme-str 'window {width: 100%;height: 100%;}' -show drun" )
+  -- , ((modMask, xK_z), spawn $ "rofi -show drun" )
 
   -- FUNCTION KEYS
   , ((0, xK_F12), spawn $ "xfce4-terminal --drop-down" )
 
   -- SUPER + SHIFT KEYS
 
-  , ((modMask .|. shiftMask , xK_Return ), spawn $ "thunar")
+  -- , ((modMask .|. shiftMask , xK_Return ), spawn $ "thunar")
   , ((modMask .|. shiftMask , xK_r ), spawn $ "xmonad --recompile && xmonad --restart")
   , ((modMask .|. shiftMask , xK_q ), kill)
   -- , ((modMask .|. shiftMask , xK_x ), io (exitWith ExitSuccess))
@@ -192,8 +192,10 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((controlMask .|. mod1Mask , xK_w ), spawn $ "arcolinux-welcome-app")
 
   -- DISPLAY CHANGE
-  , ((controlMask .|. mod1Mask , xK_1 ), spawn $ "$HOME/.screenlayout/mobile.sh")
-  , ((controlMask .|. mod1Mask , xK_2 ), spawn $ "$HOME/.screenlayout/dp2.sh")
+  , ((controlMask .|. modMask , xK_1 ), spawn $ "$HOME/.screenlayout/mobile.sh")
+  , ((controlMask .|. modMask , xK_2 ), spawn $ "$HOME/.screenlayout/dp2.sh")
+  , ((controlMask .|. modMask , xK_3 ), spawn $ "$HOME/.screenlayout/docked.sh")
+  , ((controlMask .|. modMask , xK_4 ), spawn $ "$HOME/.screenlayout/docked_mobile.sh")
 
   -- ALT + ... KEYS
 
@@ -270,7 +272,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Cycle through the available layout algorithms.
   , ((modMask, xK_l), sendMessage NextLayout)
 
-  , ((modMask, xK_space), spawn $ "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")
+  -- , ((modMask, xK_space), spawn $ "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")
+  , ((modMask, xK_space), spawn $ "rofi -show drun" )
   --Focus selected desktop
   , ((mod1Mask, xK_Tab), nextWS)
 
