@@ -22,8 +22,11 @@
 # background = "#222222"
 # foreground = "#F9F9F9"
 
+# import = [
+#     "~/.config/alacritty/colorschemes/rose-pine-moon.toml"
+# ]
 import = [
-    "~/.config/alacritty/colorschemes/rose-pine-moon.toml"
+    "~/.config/alacritty/colorschemes/poimandres.toml"
 ]
 
 [env]
