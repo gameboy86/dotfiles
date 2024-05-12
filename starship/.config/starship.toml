@@ -1,23 +1,19 @@
 format = """
 $hostname\
+$directory\
+$fill\
 $git_branch\
 $git_commit\
 $git_state\
 $git_status\
-$directory\
-$fill\
-$singularity\
 $kubernetes\
 $docker_context\
 $golang\
 $lua\
 $python\
 $solidity\
-$meson\
-$custom\
 $jobs\
 $status\
-$container\
 $time\
 \n\
 $cmd_duration\
@@ -45,9 +41,11 @@ color_yellow = '#d79921'
 color_snow = '#e5e9f0'
 color_snow_2 = '#d8dee9'
 
+[kubernetes]
+disabled = false
+
 [hostname]
 ssh_only = true
-ssh_symbol = "\\[SSH\\]"
 format = ' [SSH on $hostname](bold color_orange)'
 disabled = false
 
@@ -68,11 +66,13 @@ disabled = false
 
 [directory]
 truncation_length = 3
-truncation_symbol = "…/"
+# truncation_symbol = "…/"
+# truncation_symbol = ".../"
 truncate_to_repo = true
 read_only = "󰌾"
 style = "fg:color_snow italic bold"
 format = ' [$path]($style) [$read_only]($read_only_style)'
+# format = " [\ueaed \\[[$path]($style) [$read_only]($read_only_style)\\]](color_blue)"
 
 [cmd_duration]
 min_time = 500
@@ -91,9 +91,10 @@ utc_time_offset = "local"
 style = "bold fg:color_purple"
 
 [git_branch]
-format = "[ \\[$symbol $branch(:$remote_branch)\\]]($style)"
-symbol = "[\ue725](bold color_purple)"
-style = "bold italic fg:color_blue"
+# format = "[ \\[$symbol [$branch(:$remote_branch)](bold italic fg:color_bg3)\\]]($style)"
+format = "[ \\[$symbol [$branch(:$remote_branch)](bold italic fg:color_bg3)\\]]($style)"
+symbol = "[\ue702](bold color_orange)"
+style = "bold color_bg3"
 
 [git_status]
 style = 'fg:color_red bold'
@@ -101,19 +102,20 @@ style = 'fg:color_red bold'
 [lua]
 symbol = "\ue620 "
 format = " [${symbol}${version}]($style)"
-style = "italic bright-yellow"
+style = "italic color_blue"
 
 [python]
-symbol = "[\ue73c ](italic bright-blue)⌊ "
+symbol = "\ue73c "
 format = " [${symbol}${version}]($style)"
 version_format = "${major}.${minor}"
-style = "italic bright-yellow"
+style = "italic color_blue"
 
 [docker_context]
 symbol = "\uf21f "
+style = "italic color_blue"
 format = " [$symbol$context]($style)"
 
 [golang]
-symbol = "\ue627 "
-style = "italic bright-yellow"
+symbol = "[\ue627](color_blue) "
+style = "italic color_blue"
 format = " [$symbol($version )]($style)"
