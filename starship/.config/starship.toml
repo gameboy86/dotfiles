@@ -106,9 +106,11 @@ style = "italic color_blue"
 
 [python]
 symbol = "\ue73c "
-format = " [${symbol}${version}]($style)"
+# format = " [${symbol}${version}]($style)"
+format = ' [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 version_format = "${major}.${minor}"
 style = "italic color_blue"
+# pyenv_version_name = true
 
 [docker_context]
 symbol = "\uf21f "
