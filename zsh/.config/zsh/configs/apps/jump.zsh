@@ -1,4 +1,8 @@
-eval "$(jump shell zsh)"
+if ! type "$jump" &> /dev/null; then
+  eval "$(jump shell zsh)"
+else
+  echo "[jump] Not installed"
+fi
 
 __jump_chpwd() {
   jump chdir
