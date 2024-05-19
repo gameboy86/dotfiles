@@ -14,7 +14,6 @@ $python\
 $solidity\
 $jobs\
 $status\
-$time\
 \n\
 $cmd_duration\
 $sudo\
