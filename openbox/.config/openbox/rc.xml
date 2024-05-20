@@ -346,6 +346,9 @@
         <monitor>next</monitor>
       </action>
     </keybind>
+    <keybind key="W-c">
+      <action name="Iconify"/>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
