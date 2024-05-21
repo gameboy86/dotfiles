@@ -317,11 +317,11 @@
       </action>
     </keybind>
     <keybind key="W-Up">
-      <action name="ToggleMaximize">
+      <action name="Maximize">
       </action>
     </keybind>
     <keybind key="W-Down">
-      <action name="ToggleMinimalize">
+      <action name="Unmaximize">
       </action>
     </keybind>
     <keybind key="W-Left">
