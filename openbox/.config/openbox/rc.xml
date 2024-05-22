@@ -311,6 +311,16 @@
         <command>rofi -show run</command>
       </action>
     </keybind>
+    <keybind key="W-space">
+      <action name="Execute">
+        <command>rofi -show run</command>
+      </action>
+    </keybind>
+    <keybind key="W-p">
+      <action name="Execute">
+        <command>flameshot gui</command>
+      </action>
+    </keybind>
     <keybind key="W-Return">
       <action name="Execute">
         <command>alacritty</command>
