@@ -359,6 +359,20 @@
     <keybind key="W-c">
       <action name="Iconify"/>
     </keybind>
+
+  <keybind key="W-b">
+	  <action name="ForEach">
+	  <query>
+	  <undecorated>yes</undecorated>
+	  </query>
+  <then>
+	  <action name="ToggleDecorations"/>
+	  </then>
+	  <else>
+	  <action name="ToggleDecorations"/>
+	  </else>
+	  </action>
+  </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
