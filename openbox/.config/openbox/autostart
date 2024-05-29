@@ -1,2 +1,3 @@
+unclutter -idle 1 -root &
 nitrogen --restore &
 rofi -show run &
