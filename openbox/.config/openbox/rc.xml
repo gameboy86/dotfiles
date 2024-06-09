@@ -361,17 +361,18 @@
     </keybind>
 
   <keybind key="W-b">
-	  <action name="ForEach">
-	  <query>
-	  <undecorated>yes</undecorated>
-	  </query>
-  <then>
+	  <!-- <action name="ForEach"> -->
+	  <!-- <query> -->
 	  <action name="ToggleDecorations"/>
-	  </then>
-	  <else>
-	  <action name="ToggleDecorations"/>
-	  </else>
-	  </action>
+	  <!-- <undecorated>yes</undecorated> -->
+	  <!-- </query> -->
+  <!-- <then> -->
+	 <!--  <action name="ToggleDecorations"/> -->
+	 <!--  </then> -->
+	 <!--  <else> -->
+	 <!--  <action name="ToggleDecorations"/> -->
+	 <!--  </else> -->
+	  <!-- </action> -->
   </keybind>
   </keyboard>
   <mouse>
