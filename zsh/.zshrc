@@ -11,6 +11,7 @@ source "${base_zsh_configs_dir}/apps/starship.zsh"
 source "${base_zsh_configs_dir}/apps/fzf.zsh"
 source "${base_zsh_configs_dir}/apps/zoxide.zsh"
 source "${base_zsh_configs_dir}/apps/vfox.zsh"
+source "${base_zsh_configs_dir}/apps/yazi.zsh"
 
 # local configuratin dedicated for this system
 if [ -d "$HOME/zsh/configs" ]
