@@ -23,6 +23,13 @@ zinit light zsh-users/zsh-completions
 ## autosuggestions
 zinit light zsh-users/zsh-autosuggestions
 
+## zsh history substring search
+zinit light zsh-users/zsh-history-substring-search
+
+## you should use (if exist aliast for command you use it will notify me)
+# zinit snippet https://github.com/MichaelAquilina/zsh-you-should-use
+zinit light MichaelAquilina/zsh-you-should-use
+
 ## fzf
 zinit light Aloxaf/fzf-tab
 
@@ -33,6 +40,7 @@ zinit snippet OMZP::archlinux
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
+zinit snippet OMZP::copybuffer
 
 
 # load competions
@@ -65,3 +73,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+
+# zsh history substring search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
