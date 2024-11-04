@@ -1,6 +1,3 @@
-import = [
-    "~/.config/alacritty/colorschemes/tokyo-night.toml"
-]
 
 [env]
 TERM = "xterm-256color"
@@ -39,4 +36,9 @@ bindings = [
   { action = "IncreaseFontSize", key = "Plus", mods = "Control" },
   { action = "DecreaseFontSize", key = "Minus", mods = "Control" },
   { action = "ResetFontSize", key = "Key0", mods = "Control" },
+]
+
+[general]
+import = [
+    "~/.config/alacritty/colorschemes/tokyo-night.toml"
 ]
