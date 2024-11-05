@@ -8,7 +8,7 @@
 	// Choose the order of the modules
 	"modules-left": [
 		"hyprland/workspaces",
-		"sway/mode",
+		"hyprland/submap",
 		"sway/scratchpad",
 		"custom/media",
 	],
@@ -18,9 +18,8 @@
 	"modules-right": [
 		// "mpd",
 		// "idle_inhibitor",
-		// "pulseaudio",
-		// "network",
-		"power-profiles-daemon",
+		"pulseaudio",
+		"network",
 		"cpu",
 		"memory",
 		"temperature",
@@ -30,36 +29,36 @@
 		"battery",
 		// "battery#bat2",
 		// "custom/power",
+		"power-profiles-daemon",
 		"clock",
 		"tray",
 	],
 	// Modules configuration
-	// "hyprland/workspaces": {
-	//     "disable-scroll": true,
-	//     "all-outputs": true,
-	//     "warp-on-scroll": false,
-	//     "format": "{name}: {icon}",
-	//     "format-icons": {
-	//         "1": "",
-	//         "2": "",
-	//         "3": "",
-	//         "4": "",
-	//         "5": "",
-	//         "urgent": "",
-	//         "focused": "",
-	//         "default": ""
-	//     }
-	// },
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"warp-on-scroll": false,
+		"format": "{name}: {icon}",
+		"format-icons": {
+			"1": " ",
+			"2": "  ",
+			"3": "",
+			"10": " ",
+			"urgent": " ",
+			"focused": " ",
+			"default": " "
+		}
+	},
 	"keyboard-state": {
 		"numlock": true,
 		"capslock": true,
 		"format": "{name} {icon}",
 		"format-icons": {
-			"locked": "",
-			"unlocked": "",
+			"locked": " ",
+			"unlocked": " ",
 		},
 	},
-	"sway/mode": {
+	"hyprland/mode": {
 		"format": "<span style=\"italic\">{}</span>",
 	},
 	"sway/scratchpad": {
@@ -67,7 +66,7 @@
 		"show-empty": false,
 		"format-icons": [
 			"",
-			""
+			" "
 		],
 		"tooltip": true,
 		"tooltip-format": "{app}: {title}",
@@ -128,10 +127,10 @@
 		// "format-critical": "{temperatureC}°C {icon}",
 		"format": "{temperatureC}°C {icon}",
 		"format-icons": [
-			"",
+			"",
 			"",
-			""
-		],
+			""
+		]
 	},
 	"backlight": {
 		// "device": "acpi_video1",
@@ -156,7 +155,7 @@
 		},
 		"format": "{capacity}% {icon}",
 		"format-full": "{capacity}% {icon}",
-		"format-charging": "{capacity}% ",
+		"format-charging": "{capacity}% 󰂄",
 		"format-plugged": "{capacity}% ",
 		"format-alt": "{time} {icon}",
 		// "format-good": "", // An empty format will hide the module
@@ -194,7 +193,8 @@
 	},
 	"pulseaudio": {
 		// "scroll-step": 1, // %, can be a float
-		"format": "{volume}% {icon} {format_source}",
+		"format": "{volume}% {icon}",
+		// "format": "{volume}% {icon} {format_source}",
 		"format-bluetooth": "{volume}% {icon} {format_source}",
 		"format-bluetooth-muted": " {icon} {format_source}",
 		"format-muted": " {format_source}",
