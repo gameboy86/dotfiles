@@ -1,0 +1,30 @@
+[include]
+    path = ./delat_themes.gitconfig
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    tool = nvimdiff
+    conflictstyle = diff3
+
+[mergetool "nvimdiff"]
+    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[diff]
+    tool = nvimdiff
+    colorMoved = default
+
+[delta]
+    navigate = true
+    light = false
+    side-by-side = true
+    line-numbers = true
+    syntax-theme = github
+    file-style = bold yellow ul
+    file-decoration-style = none
+    hunk-header-style = file line-number syntax
+    features = mantis-shrimp
