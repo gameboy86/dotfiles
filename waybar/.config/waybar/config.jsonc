@@ -29,6 +29,7 @@
     "all-outputs": true,
     "warp-on-scroll": false,
     "format": "{name}: {icon}",
+    "tooltip": false,
     "format-icons": {
       "1": " ",
       "2": "  ",
@@ -41,6 +42,7 @@
     },
   },
   "hyprland/workspaces": {
+    "tooltip": false,
     "disable-scroll": true,
     "all-outputs": true,
     "warp-on-scroll": false,
@@ -59,14 +61,18 @@
   "hyprland/mode": {
     "format": "<span style=\"italic\">{}</span>",
   },
+  "sway/window": {
+    "tooltip": false,
+  },
   "sway/scratchpad": {
     "format": "{icon} {count}",
     "show-empty": false,
     "format-icons": ["", " "],
-    "tooltip": true,
+    "tooltip": false,
     "tooltip-format": "{app}: {title}",
   },
   "idle_inhibitor": {
+    "tooltip": false,
     "format": "{icon}",
     "format-icons": {
       "activated": "",
@@ -77,6 +83,7 @@
     "spacing": 10,
   },
   "clock": {
+    "tooltip": false,
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}",
   },
@@ -86,15 +93,18 @@
   },
   "memory": {
     "format": "{}% ",
+    "tooltip": false,
   },
   "temperature": {
     "critical-threshold": 80,
     "format": "{temperatureC}°C {icon}",
     "format-icons": ["", "", ""],
+    "tooltip": false,
   },
   "backlight": {
     "format": "{percent}% {icon}",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "tooltip": false,
   },
   "battery": {
     "states": {
@@ -107,11 +117,12 @@
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", ""],
+    "tooltip": false,
   },
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
+    "tooltip": false,
     "format-icons": {
       "default": "",
       "performance": "",
@@ -126,12 +137,13 @@
     "format-linked": "{ifname} (No IP) 󰈂",
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "tooltip": false,
   },
   "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
+    "format": "{volume}% {icon}  | format_source}",
+    "format-bluetooth": "{volume}% {icon} | {format_source}",
+    "format-bluetooth-muted": "{icon}󰂲 | {format_source}",
+    "format-muted": "  | {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
@@ -144,8 +156,10 @@
       "default": ["", "", ""],
     },
     "on-click": "pavucontrol",
+    "tooltip": false,
   },
   "custom/external-ip": {
     "exec": "curl -s ifconfig.me",
+    "tooltip": false,
   },
 }
