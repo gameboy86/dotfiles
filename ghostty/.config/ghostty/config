@@ -1,0 +1,16 @@
+term = "xterm-256color"
+
+font-family = "JetBrainsMono Nerd Font"
+
+font-size = 10
+
+background-opacity = 0.9
+
+scrollback-limit = 50000000
+
+keybind = ctrl+plus=increase_font_size:1
+keybind = ctrl+equal=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
+keybind = ctrl+zero=reset_font_size
+
+theme = "TokyoNight"
