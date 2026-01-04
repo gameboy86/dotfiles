@@ -1,5 +1,3 @@
-if ! type "$fzf" &> /dev/null; then
-  eval "$(fzf --zsh)"
-else
-  echo "[fzf] Not installed"
+if command -v fzf >/dev/null 2>&1; then
+  eval "$(command fzf --zsh)"
 fi
