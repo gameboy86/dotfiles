@@ -1,0 +1,15 @@
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP="sway:GNOME"
+export XDG_SESSION_DESKTOP=sway
+
+export SDL_VIDEODRIVER=wayland
+export QT_QPA_PLATFORM=wayland
+export MOZ_ENABLE_WAYLAND=1
+export GDK_BACKEND=wayland,x11
+
+export OZONE_PLATFORM=wayland
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+export LOCK_TIMEOUT=600
+export DPMS_TIMEOUT=1800
+export SUSPEND_TIMEOUT=3600
