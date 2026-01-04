@@ -1,3 +1,4 @@
 --ignore-errors
 
 -o ~/Videos/%(webpage_url_domain)s.%(uploader)s.%(title)s.%(ext)s
+--cookies-from-browser firefox:~/.zen
