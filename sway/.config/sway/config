@@ -1,21 +1,10 @@
 xwayland enable
 
-set $laptop eDP-1
-set $left "LG Electronics LG IPS QHD 501TFUY04038"
-set $rigth "LG Electronics LG SDQHD 411NTHM9Y137"
+bindswitch --reload --locked lid:on output eDP-1 disable
+bindswitch --reload --locked lid:off output eDP-1 enable
 
-bindswitch --reload --locked lid:on output $laptop disable
-bindswitch --reload --locked lid:off output $laptop enable
-
-output $laptop scale 1.5
-output $laptop pos 2560 1900 res 3840x2400
-
-output $left scale 1
-output $left pos 0 720 res 2560x1440
-
-output $right scale 1.5
-output $right pos 2560 0 res 2560x2880
-
+output eDP-1 pos 0 0 mode 3840x2400 scale 1.5 transform 0
+output DP-3 pos 0 0 mode 2560x2880 scale 1 transform 90
 
 input type:keyboard {
     xkb_layout pl
