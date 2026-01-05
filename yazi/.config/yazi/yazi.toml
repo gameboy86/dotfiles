@@ -50,6 +50,9 @@ play = [
 	{ run = 'mpv "%1"', orphan = true, for = "windows" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
+pdf = [
+  { run = "zathura %s", orphan = true, desc = "Zathura" }
+]
 
 [open]
 rules = [
@@ -67,6 +70,10 @@ rules = [
 	{ mime = "*/javascript",     use = [ "edit", "reveal" ] },
 
 	{ mime = "*", use = [ "open", "reveal" ] },
+]
+
+prepend_rules = [
+  { mime = "application/pdf", use = "pdf" }
 ]
 
 [tasks]
